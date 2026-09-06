@@ -20,8 +20,11 @@ const MAX_FILE_BYTES = Number(process.env.MAX_FILE_BYTES || 2_000_000);
 const SCAN_CONFIG_PATH =
   process.env.SCAN_CONFIG_PATH || path.join(process.cwd(), "scan-channels.json");
 const AI_SCAN_ENABLED = process.env.AI_SCAN_ENABLED !== "false";
-const openai = process.env.OPENAI_API_KEY
-  ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
+const openai = process.env.GROQ_API_KEY
+  ? new OpenAI({
+      apiKey: process.env.GROQ_API_KEY,
+      baseURL: "https://api.groq.com/openai/v1",
+    })
   : null;
 
 const severityRank = { clean: 0, suspicious: 1, high: 2, critical: 3 };
