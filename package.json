@@ -1,0 +1,17 @@
+{
+  "name": "discord-monetloader-safe-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Discord AI assistant for safe, server-compliant MonetLoader Lua utilities.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "discord.js": "^14.21.0",
+    "openai": "^5.12.2"
+  }
+}
